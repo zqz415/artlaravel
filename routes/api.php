@@ -18,6 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::prefix('uppic')->group(function (){
-    Route::post('uppic','TestCntroller@upload_file');
-
-});
+    Route::post('uppic','TestCntroller@upload_file');//上传图片
+});//lzz
+Route::prefix('user')->group(function () {
+    Route::post('login', 'LoginController@login'); //管理员登陆
+    Route::post('logout', 'LoginController@logout'); //管理员退出登陆
+    Route::post('registered', 'LoginController@registered'); //管理员注册
+});//--lzz
