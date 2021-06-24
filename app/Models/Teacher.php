@@ -18,17 +18,20 @@ class Teacher extends Model
      * @param $id
      * @return mixed
      */
-    public static function lzz_creat_teacher($request,$id){
+    public static function lzz_creat_teacher($request){
         try {
 
-            $data = self::creat([
-                'opus_id'=>$id,
+            $data = self::create([
+                'type_id'=>$request['type_id'],
+                'opus_id'=>$request['opus_id'],
                 'teacher_name'=>$request['teacher_name'],
+                'teacher_card'=>$request['teacher_card'],
                 'teacher_nation'=>$request['teacher_nation'],
                 'teacher_age'=>$request['teacher_age'],
                 'teacher_area'=>$request['teacher_area'],
                 'school_name'=>$request['school_name'],
                 'school_depa'=>$request['school_depa'],
+                'contact_number'=>$request['contact_number'],
                 'teacher_post'=>$request['teacher_post'],
             ]);
             return $data;
