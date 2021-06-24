@@ -1,6 +1,6 @@
 <?php
 
-namespace App\models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,4 +10,5 @@ class Phophy extends Model
     public $timestamps = true;
     protected $primaryKey = "phophy_id";
     protected $guarded = [];
+
 }

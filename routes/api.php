@@ -25,3 +25,8 @@ Route::prefix('user')->group(function () {
     Route::post('logout', 'LoginController@logout'); //管理员退出登陆
     Route::post('registered', 'LoginController@registered'); //管理员注册
 });//--lzz
+Route::prefix('pauther')->namespace('Pauther')->group(function () {
+    Route::post('paintingcreat', 'PrpaintingController@creatPrpain'); //校长绘画作品上传
+    Route::post('caphycreat', 'CaphyController@creatCaphy'); //校长书法作品上传
+    Route::post('phophycreat', 'PhophyController@creatPphphy'); //校长摄影作品上传
+});//--lzz
