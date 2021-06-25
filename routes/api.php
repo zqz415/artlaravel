@@ -28,6 +28,8 @@ Route::prefix('user')->group(function () {
 Route::prefix('pauther')->namespace('Pauther')->group(function () {
     Route::post('paintingcreat', 'PrpaintingController@creatPrpain'); //校长绘画作品上传
     Route::post('caphycreat', 'CaphyController@creatCaphy'); //校长书法作品上传
-    Route::post('phophycreat', 'PhophyController@creatPphphy'); //校长摄影作品上传
+    Route::post('phophycreat', 'PhophyController@creatPphphy'); //校长摄影作品上
     Route::post('casecreat', 'CaseController@lzzcreatcase'); //工作坊作品上传
+    Route::post('whorkshopcreat', 'WorkShopController@workshop'); //工作坊作品上传
+    Route::post('theashopcreat', 'WorkShopController@creatworkuer'); //工作坊作品教师上传
 });//--lzz
